@@ -1,0 +1,54 @@
+.promo {
+  padding-top: 270px;
+  padding-bottom: 200px;
+  background-image: url(../img/promo/promo_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+		&__inner {
+		}
+
+		&__content-wrap {
+		}
+
+		&__title {
+      max-width: 920px;
+      color: var(--color-white);
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 140%;
+      margin-bottom: 50px;
+		}
+
+		&__time {
+      display: flex;
+      justify-content: space-between;
+      max-width: 522px;
+		}
+    
+		&__time-item {
+      background: #121212;
+      padding: 20px 30px;
+      
+		}
+
+    &__time-number {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      color: var(--color-white);
+      line-height: 140%;
+    }
+
+    &__time-word {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: var(--color-white);
+      opacity: 0.4;
+      line-height: 140%;
+    }
+}
+.container {
+}
