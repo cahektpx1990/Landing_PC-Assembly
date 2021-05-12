@@ -1,0 +1,54 @@
+$breakpoints: (
+  xxl: 1400px,
+  xl: 1200px,
+  md: 992px,
+  sd: 640px,
+);
+
+@mixin breakpoint($screen-size) {
+  @if map-has-key($breakpoints, $screen-size) {
+    @media (max-width: map-get($breakpoints, $screen-size)) {
+      @content;
+    }
+  }  
+  @else {
+    // Debugging
+    @error "#{$screen-size} has not been declared as a breakpoint."
+  }
+}
+
+
+:root {
+  --content-width: 1300px;
+  --gutter: 12px;
+  --mob-padding: 20px;
+}
+
+@mixin col($size) {
+  width: calc(100% * $size - var(--gutter) * 2);
+  margin-right: var(--gutter);
+  margin-left: var(--gutter);
+  
+}
+
+/*
+@mixin offset($size) {
+  margin-left: calc(100% * $size - var(--gutter));
+}
+
+*/
+
+.container {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--mob-padding);
+  padding-right: var(--mob-padding);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--gutter) * -1);
+  margin-right: calc(var(--gutter) * -1);
+}
