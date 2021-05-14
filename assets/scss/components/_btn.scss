@@ -1,3 +1,14 @@
 .btn {
+  display: inline-block;
+  appearance: none;
+  padding: 10px 30px;
+  color: var(--color-white);
+  border-radius: 50px;
+  font-size: 16px;
+  font-style: normal; 
   
+  @include breakpoint(sm) {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
 }

@@ -2,7 +2,7 @@ $breakpoints: (
   xxl: 1400px,
   xl: 1200px,
   md: 992px,
-  sd: 640px,
+  sm: 640px
 );
 
 @mixin breakpoint($screen-size) {
@@ -24,11 +24,22 @@ $breakpoints: (
   --mob-padding: 20px;
 }
 
-@mixin col($size) {
-  width: calc(100% * $size - var(--gutter) * 2);
+@mixin col() {
+  box-sizing: border-box;
   margin-right: var(--gutter);
-  margin-left: var(--gutter);
+  margin-left: var(--gutter);  
+}
+
+@mixin size($size) {
+  width: calc(100% * $size - var(--gutter) * 2);
   
+}
+
+@mixin row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--gutter) * -1);
+  margin-right: calc(var(--gutter) * -1);  
 }
 
 /*
@@ -47,8 +58,5 @@ $breakpoints: (
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(var(--gutter) * -1);
-  margin-right: calc(var(--gutter) * -1);
+  @include row();
 }

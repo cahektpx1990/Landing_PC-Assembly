@@ -16,22 +16,22 @@
           <nav class="header__nav">
             <ul class="header__menu menu">
               <li class="menu-item">
-                <a href="">Главная</a>
+                <a href="#!">Главная</a>
               </li>
               <li class="menu-item menu__item-has-children">
-                <a href="">Курсы</a>
+                <a href="#!">Курсы</a>
                 <ul class="sub-menu">
                   <li class="menu-item">
-                    <a href=""> Курс 1</a>
+                    <a href="#!"> Курс 1</a>
                   </li>
                   <li class="menu-item">
-                    <a href=""> Курс 2</a>
+                    <a href="#!"> Курс 2</a>
                   </li>
                   <li class="menu-item">
-                    <a href=""> Курс 3</a>
+                    <a href="#!"> Курс 3</a>
                   </li>
                   <li class="menu-item">
-                    <a href=""> Курс 4</a>
+                    <a href="#!"> Курс 4</a>
                   </li>
                 </ul>
               </li>
@@ -39,22 +39,52 @@
                 <a href="">Расписание</a>
               </li>
               <li class="menu-item">
-                <a href="">Преподаватели</a>
+                <a href="#!">Преподаватели</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu__item-has-children">
+                    <a href="#!">Сергей Анатольвич</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item">
+                        <a href="#!">Старший</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#!">Младший</a>
+                      </li>                      
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#!">Григорий Вассерман</a>
+                  </li>
+                  <li class="menu-item menu__item-has-children">
+                    <a href="#!">Александр Друзь</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item">
+                        <a href="#!">Младший</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#!">Страший</a>
+                      </li>                      
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#!">Дмитрий Новик</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item">
-                <a href="">Рассылка</a>
+                <a href="#!">Рассылка</a>
               </li>
               <li class="menu-item">
-                <a href="">Контакты</a>
+                <a href="#!">Контакты</a>
               </li>
             </ul>
           </nav>
         </div>
-        <a href="" class="header__cta btn">Зайти в кабинет</a>
+        <a href="#!" class="header__cta btn">Зайти в кабинет</a>
         <div class="header__burger burger">
-          <div class="header__line"></div>
-          <div class="header__line"></div>
-          <div class="header__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
         </div>
       </div>
     </div>
@@ -88,6 +118,40 @@
           </div>          
         </div>
       </div>
+      <section class="income">
+        <div class="container">
+          <div class="income__content">
+            <div class="income__indicator">
+              <a href="#!" class="income__btn btn">Заказать курс</a>
+              <div class="income__stats">
+                <div class="income__students">
+                  <p class="income__students-text">Учеников всего:</p>
+                  <p class="income__students-number">200</p>
+                </div>
+                <div class="income__graduates">
+                  <p class="income__graduates-text">Успешно закончили курс:</p>
+                  <p class="income__graduates-number">199</p>
+                </div>              
+              </div>
+            </div>
+            <div class="income__progress">
+              <div class="income__progress-st">
+                <p>Заработано учениками:</p>
+                <span>400</span>
+              </div>
+              <div class="income__progress-line">
+                <progress class="income__progress-elem" value="40" max="100"></progress>
+              </div>
+              <div class="income__progress-stats">
+                <div class="income__progress-number">
+                  <p>0</p>
+                  <p>1 000 000₽</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </section>
     </section>
   </main>
   <script src="./assets/js/index.js"></script>

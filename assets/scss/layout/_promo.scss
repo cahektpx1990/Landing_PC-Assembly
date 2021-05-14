@@ -1,6 +1,5 @@
 .promo {
   padding-top: 270px;
-  padding-bottom: 200px;
   background-image: url(../img/promo/promo_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,18 +18,34 @@
       font-size: 64px;
       line-height: 140%;
       margin-bottom: 50px;
+
+      @include breakpoint(sm) {
+        font-size: 40px;
+      }
+
+      br {
+        display: none;
+      }
 		}
 
 		&__time {
       display: flex;
       justify-content: space-between;
-      max-width: 522px;
+      max-width: 522px; 
+      margin-bottom: 200px; 
+      
+      @include breakpoint(sm) {
+        max-width: 300px;
+      }
 		}
     
 		&__time-item {
       background: #121212;
       padding: 20px 30px;
       
+      @include breakpoint(sm) {
+        padding: 10px 15px;
+      }
 		}
 
     &__time-number {
@@ -39,6 +54,10 @@
       font-size: 36px;
       color: var(--color-white);
       line-height: 140%;
+
+      @include breakpoint(sm) {
+        font-size: 28px;
+      }
     }
 
     &__time-word {
@@ -48,7 +67,10 @@
       color: var(--color-white);
       opacity: 0.4;
       line-height: 140%;
+
+      @include breakpoint(sm) {
+        font-size: 12px;
+      }
     }
 }
-.container {
-}
+
