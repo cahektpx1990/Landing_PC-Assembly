@@ -1,4 +1,16 @@
 html {
-  font-family: 'Roboto';
+  font-family: 'Roboto';  
+}
+
+body {
+
+  &.content-hidden {
+    overflow: hidden;
+  }
+}
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
