@@ -40,8 +40,7 @@
       z-index: 9;
 
       &_visible {
-        display: block;
-  
+        display: block;  
       }
     }
 
@@ -62,6 +61,7 @@
     @include breakpoint(md) {
       flex-direction: column;
     }
+
     .menu-item:last-child {
       margin-right: 0;
     }
@@ -82,7 +82,8 @@
 
         .sub-menu {
           opacity: 1;
-          visibility: visible;                   
+          visibility: visible;   
+          top: 50px;                
         }
       }
 
@@ -136,25 +137,23 @@
           .sub-menu {
             display: block;
             position: absolute;
+            top: 20px;
             left: 100%;
-            top: 0;
 
             @include breakpoint(md) {
               display: block;
               position: static;
-              padding-left: 20px;
+              padding-left: 30px;
               opacity: 1;
               visibility: visible;
               transform: translate(0, 0);
-            }
-            
+            }            
           }
         }
 
         > a {
           @include breakpoint(md) {
-            font-size: 16px;
-            
+            font-size: 20px;            
           }
         }        
       }
@@ -168,14 +167,13 @@
         @include breakpoint(md) {
           display: block;
           position: static;
-          padding-left: 20px;
+          padding-left: 30px;
           opacity: 1;
-          visibility: visible;
           transform: translate(0, 0);
         }
 
         .menu-item > a {
-          font-size: 12px;
+          font-size: 16px;
         }
       }
     }
