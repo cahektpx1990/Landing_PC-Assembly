@@ -8,6 +8,7 @@ const rename = require("gulp-rename");
 const gcmq = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const include = require('gulp-include');
 // sass.compiler = require('node-sass');
 
 
@@ -27,6 +28,16 @@ gulp.task('sass', function () {
     .pipe(browserSync.reload({ stream: true}));    
 });
 
+gulp.task("js", function () {
+  return gulp.src('./src/assets/js/index.js')
+    .pipe(include())
+      .on('error', console.log)
+      // 
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./src/assets/js'))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
@@ -41,7 +52,7 @@ gulp.task('browser-sync', function () {
 gulp.task('checkupdate', function () {
   gulp.watch('./src/assets/scss/**/*.scss', gulp.parallel('sass'));
   gulp.watch('./src/*.html').on('change', browserSync.reload);
-  gulp.watch('./src/*.js').on('change', browserSync.reload);
+  gulp.watch('./src/assets/js/components/**/*.js').on('change', browserSync.reload);
 });
 
-gulp.task("watch", gulp.parallel("sass", "checkupdate", "browser-sync"));
+gulp.task("watch", gulp.parallel("sass", "js", "checkupdate", "browser-sync"));
