@@ -5,27 +5,13 @@
   background-size: cover;
   background-position: center;
 
-		&__inner {
-		}
-
-		&__content-wrap {
-		}
-
 		&__title {
       max-width: 920px;
-      color: var(--color-white);
-      font-weight: bold;
       font-size: 64px;
-      line-height: 140%;
       margin-bottom: 50px;
-
       @include breakpoint(sm) {
         font-size: 40px;
-      }
-
-      br {
-        display: none;
-      }
+      }      
 		}
 
 		&__time {
