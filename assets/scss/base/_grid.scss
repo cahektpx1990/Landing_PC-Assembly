@@ -31,7 +31,7 @@ $breakpoints: (
 }
 
 @mixin size($size) {
-  width: calc(100% * $size - var(--gutter) * 2);
+  width: calc(100% * #{$size} - var(--gutter) * 2);
   
 }
 
@@ -42,12 +42,9 @@ $breakpoints: (
   margin-right: calc(var(--gutter) * -1);  
 }
 
-/*
 @mixin offset($size) {
-  margin-left: calc(100% * $size - var(--gutter));
+  margin-left: calc(100% * #{$size} - var(--gutter));
 }
-
-*/
 
 .container {
   max-width: var(--content-width);
