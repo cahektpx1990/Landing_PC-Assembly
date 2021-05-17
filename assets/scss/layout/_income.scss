@@ -23,7 +23,8 @@
     }
 
     @include breakpoint(sm) {
-      width: 380px;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -53,6 +54,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+
+    @include breakpoint(sm) {
+      margin-top: 15px;
+    }
   }
 
   &__students-text {

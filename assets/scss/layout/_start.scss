@@ -1,0 +1,138 @@
+.start {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 115px;
+    
+    &::before {
+      content: url(../img/start/icon.svg);   
+      position: absolute;
+      bottom: -15px;
+      left: 10px;         
+      
+      @include breakpoint(sm) {
+        bottom: 0px;
+      }
+    }
+  }
+
+  &__subtitle {
+    max-width: 411px;
+    margin-bottom: 80px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__block-percent {
+    display: flex;
+    margin-bottom: 20px;
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  &__percent {
+    font-size: 36px;
+    width: 25%;
+  }
+
+  
+  &__block-fill {
+    display: flex;
+    align-items: center;
+    
+    @include breakpoint(sm) {
+      order: 2;
+      flex-direction: column;
+      width: 80px;
+    }
+  }
+
+  &__fill-bg {
+    width: 25%;
+    background: var(--bg-purple);    
+
+    @include breakpoint(sm) {
+      background: var(--bg-purgle-column);
+      height: 300px;
+    }
+
+    &:nth-child(1) {
+      height: 80px;
+
+      @include breakpoint(sm) {
+        width: 80px;  
+        height: 300px;             
+      }
+    }
+
+    &:nth-child(2) {
+      height: 60px;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+
+      @include breakpoint(sm) {
+        width: 60px; 
+        height: 300px;      
+        transform: matrix(1,0,0,-1,0,0); 
+      }
+    }
+
+    &:nth-child(3) {
+      height: 30px;
+
+      @include breakpoint(sm) {
+        height: 300px;
+        width: 30px;   
+      }
+    }
+
+    &:nth-child(4) {
+      height: 10px;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+
+      @include breakpoint(sm) {
+        width: 10px;   
+        height: 300px;     
+        transform: matrix(1,0,0,-1,0,0);
+      }
+    }
+  }
+
+  &__block-text {
+    display: flex;
+    margin-top: 25px;
+
+    @include breakpoint(sm) {
+      order: 1;
+      flex-direction: column;
+      margin-top: 0;
+      width: 100%;
+      margin-right: 15px;
+      }
+  }
+
+  &__text {
+    width: 25%;
+    margin-right: 18px;
+    font-size: 14px;
+
+    @include breakpoint(sm) {
+      height: 300px;  
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+

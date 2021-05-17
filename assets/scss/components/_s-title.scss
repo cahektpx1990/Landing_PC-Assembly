@@ -1,0 +1,11 @@
+.s-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 140%;
+  color: var(--color-white);
+
+  @include breakpoint(md) {
+    font-size: 36px;
+  }
+}
