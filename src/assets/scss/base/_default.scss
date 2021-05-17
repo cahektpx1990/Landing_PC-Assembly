@@ -3,7 +3,9 @@ html {
 }
 
 body {
-
+  background: url(../img/main/bg-pattern.png);  
+  background-size: 15%;
+  
   &.content-hidden {
     overflow: hidden;
   }

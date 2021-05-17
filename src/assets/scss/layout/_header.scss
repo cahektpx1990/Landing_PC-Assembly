@@ -182,7 +182,7 @@
 
   &__cta {    
     font-weight: normal;    
-    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    background: var(--bg-purple);
 
     @include breakpoint(md) {
       position: relative;
