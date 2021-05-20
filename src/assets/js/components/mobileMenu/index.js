@@ -10,4 +10,5 @@
     menuContainerEl.classList.toggle('header__menu-container_visible');
     document.body.classList.toggle('content-hidden');
   });
-})
+}) ();
+

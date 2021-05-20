@@ -1,0 +1,23 @@
+// swiper partners
+
+.swiper-img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.swiper-item {
+  padding-top: 25px;
+  padding-bottom: 25px;  
+  border-right: 1px solid rgba(248, 243, 243, 0.205);
+  margin-right: 0!important;
+  margin-top: 0!important; 
+  &:nth-child(-n+6) {
+    border-bottom: 1px solid rgba(248, 243, 243, 0.205);
+  } 
+  &:last-child, &:nth-child(6) {
+    border-right: none;
+  } 
+}
+
+// swiper teachers

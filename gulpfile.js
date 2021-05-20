@@ -52,7 +52,7 @@ gulp.task('browser-sync', function () {
 gulp.task('checkupdate', function () {
   gulp.watch('./src/assets/scss/**/*.scss', gulp.parallel('sass'));
   gulp.watch('./src/*.html').on('change', browserSync.reload);
-  gulp.watch('./src/assets/js/components/**/*.js').on('change', browserSync.reload);
+  gulp.watch('./src/assets/js/components/**/*.js', gulp.parallel('js')).on('change', browserSync.reload);
 });
 
-gulp.task("watch", gulp.parallel("sass", "js", "checkupdate", "browser-sync"));
+gulp.task("watch", gulp.parallel("sass", "js", "checkupdate"));
