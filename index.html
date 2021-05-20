@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.min.css">
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
   <title>Computer</title>
 </head>
 <body>
@@ -181,14 +182,14 @@
 
     <section class="start">
       <div class="container">
-        <h2 class="start__title s-title">Быстрый старт</h2>
+        <h2 class="start__title s-title circle">Быстрый старт</h2>
         <p class="start__subtitle s-subtitle">Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер</p>
         <div class="start__row">
           <div class="start__block-percent">
-            <div class="start__percent s-title">100%</div>
-            <div class="start__percent s-title">75%</div>
-            <div class="start__percent s-title">50%</div>
-            <div class="start__percent s-title">Итог</div>
+            <div class="start__percent">100%</div>
+            <div class="start__percent">75%</div>
+            <div class="start__percent">50%</div>
+            <div class="start__percent">Итог</div>
           </div>
           <div class="start__block-fill">
             <div class="start__fill-bg"></div>
@@ -205,7 +206,66 @@
         </div>
       </div>
     </section>
+
+    <!-- conditions -->
+
+    <section class="conditions">
+      <div class="container">
+        <div class="conditions__comtent">
+          <h2 class="conditions__title s-title">Получите профессию прямо сейчас</h2>
+          <div class="conditions__row row">            
+            <div class="conditions__col">
+              <img src="./assets/img/conditions/c-pc.svg" alt="" class="conditions__img">
+              <p class="conditions__col-title">Только практические
+                навыки&nbsp;в&nbsp;работе</p>
+              <p class="conditions__col-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio voluptates praesentium magnam saepe culpa et, at consequatur harum explicabo nobis aut ab eius reprehenderit nam tempora qui quos quis amet.</p>
+            </div>
+            <div class="conditions__col">
+              <img src="./assets/img/conditions/c-usb.svg" alt="" class="conditions__img">
+              <p class="conditions__col-title">Работа на самом <br>
+                современном оборудовании</p>
+              <p class="conditions__col-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio voluptates praesentium magnam saepe culpa et, at consequatur harum explicabo nobis aut ab eius reprehenderit nam tempora qui quos quis amet.</p>
+            </div>
+            <div class="conditions__col">
+              <img src="./assets/img/conditions/c-adapter.svg" alt="" class="conditions__img">
+              <p class="conditions__col-title">Сертификация <br>
+                по&nbsp;окончании обучения</p>
+              <p class="conditions__col-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio voluptates praesentium magnam saepe culpa et, at consequatur harum explicabo nobis aut ab eius reprehenderit nam tempora qui quos quis amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- partners -->
+
+    <section class="partners">
+      <div class="container">
+        <div class="partners__content">
+          <h3 class="partners__title s-title circle">Партнеры - топовые бренды</h3>
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>
+              <div class="swiper-slide swiper-item"><img class="swiper-img" src="./assets/img/partners/msi.png" alt=""></div>                                       
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>            
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>  
   <script src="./assets/js/index.min.js"></script>
 </body>
 </html>

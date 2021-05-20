@@ -50,12 +50,17 @@
   &__title {
     margin-top: 70px;
     margin-bottom: 45px;
-      }
 
+  }
+  
   &__subtitle {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 150%;
   }
+
+  // .s-title_none::before {
+  //   content: none;
+  // }
 }

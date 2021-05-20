@@ -1,0 +1,12 @@
+.circle {
+  &::before {
+    content: url(../img/start/icon.svg);   
+    position: absolute;
+    bottom: -15px;
+    left: 10px;         
+    
+    @include breakpoint(sm) {
+      bottom: 0px;
+    }
+  }  
+}

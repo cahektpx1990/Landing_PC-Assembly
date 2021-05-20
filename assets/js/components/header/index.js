@@ -9,5 +9,4 @@
       header.classList.remove("header_has-bg");
     }
   });
-
-})
+}) ();

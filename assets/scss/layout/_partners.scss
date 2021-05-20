@@ -1,0 +1,21 @@
+
+.partners {
+  padding-top: 100px;
+  padding-bottom: 75px;
+
+  &__title {
+    position: relative;
+    padding-left: 140px;
+    margin-bottom: 89px;
+  }
+  .circle {
+    &::before {          
+      bottom: -30px;
+      left: -10px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+
