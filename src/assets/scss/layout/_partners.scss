@@ -7,12 +7,21 @@
     position: relative;
     padding-left: 140px;
     margin-bottom: 89px;
+
+    @include breakpoint(sm) {
+      padding-left: 0;
+    }
   }
   .circle {
     &::before {          
       bottom: -30px;
       left: -10px;
       transform: rotate(180deg);
+
+      @include breakpoint(sm) {
+        bottom: 120px;
+        left: 0;
+      }
     }
   }
 }
