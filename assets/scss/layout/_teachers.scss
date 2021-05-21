@@ -1,0 +1,70 @@
+.teachers {
+  padding-top: 85px;
+  padding-bottom: 100px;
+
+  &__content {
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 140px;
+    margin-bottom: 113px;
+
+    @include breakpoint(sm) {
+      padding-left: 0;      
+    }
+  }
+
+  .circle {
+    &::before {          
+      bottom: -10px;
+      left: 10px;
+      transform: rotate(-43deg);
+
+      @include breakpoint(sm) {
+        bottom: 70px;
+        left: 0;
+      }
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: var(--color-white);
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  &__specialty {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-white);
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 10px 30px;
+    color: var(--color-white);
+    border: 1px solid #FFFFFF;
+    display: inline-block;
+    border-radius: 50px;
+
+    &:hover {
+      background: var(--bg-purple);
+    }
+  }
+}
+
