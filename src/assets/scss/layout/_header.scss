@@ -192,7 +192,7 @@
     }
 
     &:hover {
-      background: linear-gradient(94.26deg, #730aec 9.51%, #2e10ec 90.23%);
+      background: var(--bg-purple-hover);
     }
   }  
 }

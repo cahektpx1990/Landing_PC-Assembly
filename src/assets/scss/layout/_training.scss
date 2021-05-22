@@ -1,0 +1,123 @@
+.training {
+  padding-top: 100px;
+  padding-bottom: 85px;
+  
+  &__wrap {    
+    text-align: center;    
+  }
+
+  &__title {
+    position: relative;
+    max-width: 485px;
+    margin-left: auto;
+    margin-right: auto;    
+  }
+
+  &__subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-white);
+    opacity: 0.5;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  
+  .circle {
+    &::before {          
+      top: -145px;
+      left: 50%;
+      transform: rotate(-45deg);     
+    }
+  }
+
+  &__way {
+    max-width: 50%;
+    margin-left: auto;
+    border-left: 6px solid transparent;
+    border-image: var(--bg-purple);
+    -moz-border-image: var(--bg-purple);
+    -webkit-border-image: var(--bg-purple);
+    border-image-slice: 1;
+    
+    @include breakpoint(sm) {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__step {
+    position: relative;
+    width: 228px;
+    text-align: left;
+    margin-left: 76px;
+
+    @include breakpoint(ssm) {
+      margin-left: 50px;
+      
+      &::before {
+        position: absolute;
+        left: -50px;        
+      }
+      
+    }
+
+    &::before {
+      position: absolute;
+      left: -77px;
+      top: 33px;
+      content: '______';
+      color: white;
+      opacity: 0.3;
+    }
+
+    &:nth-child(odd) {
+      transform: translate(-169%) scale(-1, 1);     
+      
+      @include breakpoint(sm) {
+        transform: none;
+      }
+    }
+
+    &:nth-child(odd)>.training__step-title {
+      text-align: right;
+      transform: scale(-1, 1);      
+
+      @include breakpoint(sm) {
+        transform: none;
+        text-align: left;
+      }
+    }
+    &:nth-child(odd)>.training__step-subtitle {
+      text-align: right;
+      transform: scale(-1, 1);      
+
+      @include breakpoint(sm) {
+        text-align: left;
+        transform: none;
+      }
+    }
+  }
+
+  &__step-title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--color-white);
+    opacity: 0.5;
+
+    
+  }
+  
+  &__step-subtitle {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--color-white);
+    margin-top: 15px;
+
+    
+  }
+}
+
