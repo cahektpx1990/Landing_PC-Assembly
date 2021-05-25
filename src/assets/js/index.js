@@ -1,3 +1,4 @@
-//=require components/header/index.js
-//=require components/mobileMenu/index.js
-//=require components/swiper/index.js
+import'./components/header/index';
+import'./components/mobileMenu/index';
+import'./components/swiper/index';
+

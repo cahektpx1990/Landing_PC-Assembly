@@ -1,13 +1,16 @@
+
+import Swiper from 'swiper';
+
+import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+
+  // configure Swiper to use modules
+  SwiperCore.use([Navigation, Pagination]);
+
 // swiper partners
 
-const swiper = new Swiper('.mySwiper', {
-  
+const swiper = new Swiper('.mySwiper', {  
   slidesPerColumnFill: 'row',
-  slidesPerColumn: 2,
-  
-  // watchSlidesProgress: true,
-  // watchSlidesVisibility: true,
-    // loop: true,    
+  slidesPerColumn: 2,      
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -32,9 +35,8 @@ const swiper = new Swiper('.mySwiper', {
 
 // swiper teachers
 
-const swiperTeachers = new Swiper('.teachersSwiper', {
-  
-    // loop: true,    
+const swiperTeachers = new Swiper('.teachersSwiper', {  
+      
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

@@ -8,7 +8,8 @@ const rename = require("gulp-rename");
 const gcmq = require('gulp-group-css-media-queries');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const include = require('gulp-include');
+const webpack = require('webpack-stream');
+// const include = require('gulp-include');
 // sass.compiler = require('node-sass');
 
 
@@ -29,6 +30,33 @@ gulp.task('sass', function () {
 });
 
 gulp.task("js", function () {
+	return gulp  
+  .src(['src/assets/js/*.js', '!src/assets/js/*.min.js'])
+		.pipe(webpack({
+			mode: 'production',
+			performance: { hints: false },
+			module: {
+				rules: [
+					{
+						test: /\.(js)$/,
+						exclude: /(node_modules)/,
+						loader: 'babel-loader',
+						query: {
+							presets: ['@babel/env'],
+							plugins: ['babel-plugin-root-import']
+						}
+					}
+				]
+			}
+		})).on('error', function handleError() {
+			this.emit('end')
+		})
+		.pipe(rename('index.min.js'))
+		.pipe(gulp.dest('src/assets/js'))
+		.pipe(browserSync.stream())
+});
+/*
+gulp.task("js", function () {
   return gulp.src('./src/assets/js/index.js')
     .pipe(include())
       .on('error', console.log)
@@ -37,7 +65,7 @@ gulp.task("js", function () {
     .pipe(gulp.dest('./src/assets/js'))
     .pipe(browserSync.reload({ stream: true }));
 });
-
+*/
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
@@ -52,7 +80,9 @@ gulp.task('browser-sync', function () {
 gulp.task('checkupdate', function () {
   gulp.watch('./src/assets/scss/**/*.scss', gulp.parallel('sass'));
   gulp.watch('./src/*.html').on('change', browserSync.reload);
-  gulp.watch('./src/assets/js/components/**/*.js', gulp.parallel('js')).on('change', browserSync.reload);
+  gulp.watch(['src/assets/js/*.js', '!src/assets/js/*.min.js'], gulp.parallel('js')).on('change', browserSync.reload);
+  // gulp.watch('src/assets/js/*.js', '!src/assets/js/*.min.js').on('change', browserSync.reload);
 });
 
 gulp.task("watch", gulp.parallel("sass", "js", "checkupdate"));
+// gulp.task("watch", gulp.parallel("sass", "checkupdate"));
