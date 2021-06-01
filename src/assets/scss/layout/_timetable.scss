@@ -1,0 +1,39 @@
+.timetable {
+
+  
+  padding-top: 100px;
+
+  &__row {
+  }
+
+  &__content {
+
+    @include col();
+    @include size(9/12);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 140%;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__class-title {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 160%;
+    margin-bottom: 20px;
+    color: #ffffff;
+    opacity: 0.7;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+  }
+}
