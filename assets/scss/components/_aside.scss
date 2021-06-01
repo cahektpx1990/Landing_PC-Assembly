@@ -1,0 +1,24 @@
+.aside {
+
+  position: sticky;
+  top: 100px;  
+
+  @include col();
+  @include size(3/12);
+
+  &__item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  &__link {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 160%;
+    color: #ffff;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
