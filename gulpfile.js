@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
+const bssi = require('browsersync-ssi');
 const csso = require('gulp-csso');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
@@ -14,6 +15,19 @@ const del = require('del');
 // const include = require('gulp-include');
 // sass.compiler = require('node-sass');
 
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    server: {
+      baseDir: 'src/',
+      middleware: bssi({ baseDir: 'src/', ext: '.html' })
+    },
+      // notify: false,
+      // open: false,
+      // tunnel: 'mysitename081',    
+    notify: false,
+    online: true,
+  });
+});
 
 // Срабатывает все тут
 gulp.task('sass', function () {
@@ -59,16 +73,6 @@ gulp.task("js", function () {
 });
 
 
-gulp.task('browser-sync', function () {
-  browserSync.init({
-    server: {
-      baseDir: 'src',
-    },
-      // notify: false,
-      // open: false,
-      // tunnel true
-  });
-});
 
 gulp.task('clean', async function () {
   return del.sync('./dist');
@@ -89,10 +93,10 @@ gulp.task('prebuild', async function () {
 
 gulp.task('checkupdate', function () {
   gulp.watch('./src/assets/scss/**/*.scss', gulp.parallel('sass'));
-  gulp.watch('./src/*.html').on('change', browserSync.reload);
-  gulp.watch(['src/assets/js/*.js', '!src/assets/js/*.min.js'], gulp.parallel('js')).on('change', browserSync.reload);  
+  gulp.watch('./src/*.html').on('change', browserSync.reload);  
+  gulp.watch(['src/assets/js/*.js', '!src/assets/js/*.min.js'], gulp.parallel('js')).on('change', browserSync.reload);    
 });
 
-gulp.task("watch", gulp.parallel("sass", "js", "checkupdate"));
+gulp.task("watch", gulp.parallel("sass", "js", "checkupdate", 'browser-sync'));
 
 gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'js'), 'prebuild'));
